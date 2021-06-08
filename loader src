@@ -1,0 +1,95 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Contain = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Barrier = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Contain.Name = "Contain"
+Contain.Parent = ScreenGui
+Contain.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Contain.Position = UDim2.new(0.428712875, 0, 0.384449273, 0)
+Contain.Size = UDim2.new(0, 58, 0, 22)
+
+UICorner.Parent = Contain
+
+Barrier.Name = "Barrier"
+Barrier.Parent = Contain
+Barrier.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Barrier.Size = UDim2.new(0, 234, 0, 40)
+
+UICorner_2.Parent = Barrier
+
+TextLabel.Parent = Barrier
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+TextLabel.Position = UDim2.new(0.538461566, 0, 0.225000009, 0)
+TextLabel.Size = UDim2.new(0, 52, 0, 22)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "HUB"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner_3.Parent = TextLabel
+
+TextLabel_2.Parent = Barrier
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.286324799, 0, 0.099999994, 0)
+TextLabel_2.Size = UDim2.new(0, 59, 0, 31)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Microwave"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Contain
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.183760688, 0, 0.400000006, 0)
+TextLabel_3.Size = UDim2.new(0, 135, 0, 77)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Loading Script hub..."
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+-- Scripts:
+
+local function MQGMUAF_fake_script() -- Contain.LocalScript 
+	local script = Instance.new('LocalScript', Contain)
+
+	wait(1)
+	
+	script.Parent:TweenSize(UDim2.new(0, 234, 0, 145), "Out", "Sine", 1)
+	
+	wait(2)
+	
+	TextLabel_3.Text = "Loaded!"
+	
+	wait(0.5)
+	
+	script.Parent:TweenPosition(UDim2.new(0.431, 0, 1, 0), "Out", "Sine", 1)
+	
+	wait(1)
+	
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/BruhWareMaster/MicrowaveHub/main/BigPaintball"), true))()
+	
+end
+coroutine.wrap(MQGMUAF_fake_script)()
