@@ -81,7 +81,7 @@ local function MQGMUAF_fake_script() -- Contain.LocalScript
 	
 	wait(2)
 	
-	TextLabel_3.Text = "Loaded!"
+	TextLabel_3.Text = "Big paintball | Loaded!"
 	
 	wait(0.5)
 	
